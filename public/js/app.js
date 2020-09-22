@@ -13,7 +13,6 @@ weatherForm.addEventListener('submit', (e)=> {
         if(data.error) {
             errorDiv.textContent = data.error;
         }else {
-            console.log(data);
             outputDiv.textContent = `In ${data.location}, ${data.country} its currently ${data.description}`;
             weatherImg.src = `${data.icon}`;
         }
