@@ -8,6 +8,8 @@ const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath =path.join(__dirname, '../templates/partials');
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 //Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 //Setup handlebars engine and views
@@ -74,6 +76,6 @@ app.get('*', (req,res)=> {
 });
 
 
-app.listen(3000, ()=> {
+app.listen(port, ()=> {
     console.log(chalk.green.inverse('Server is up and running'));
 });
