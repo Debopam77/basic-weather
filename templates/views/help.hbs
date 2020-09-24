@@ -1,15 +1,19 @@
 <html>
-    <head>
-        <title>Weather</title>
-        <link rel='icon' href='./img/weatherIcon.ico'>
-        <link rel='stylesheet' href='./css/styles.css'>
-    </head>
-    <body>
-        <div class='main-content'> 
-            {{>header}}
+
+<head>
+    <title>Weather</title>
+    <link rel='icon' href='./img/weatherIcon.ico'>
+    <link rel='stylesheet' href='./css/styles.css'>
+</head>
+
+<body>
+
+    {{>header}}
+    <div class='main-content card'>
         <div>Proshno ta kora hok..</div>
         <div>{{customMessage}}</div>
-        </div>
-        {{>footer}}
-    </body>
+    </div>
+    {{>footer}}
+</body>
+
 </html>

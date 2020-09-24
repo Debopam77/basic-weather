@@ -5,17 +5,18 @@
 </head>
 
 <body>
-    <div class='main-content'>
-        {{>header}}
+
+    {{>header}}
+    <div class='main-content card'>
         <p>
             Get your weather information here...
         </p>
         <form>
-            <input>
-            <button class="SearchButton" placeholder='location'>Search</button>
+            <input class='shadowCard'>
+            <button class="SearchButton shadowCard" placeholder='location'>Search</button>
         </form>
-        <div class='card'>
-            <img class='container weathericon' id='weatherImg'>
+        <div>
+            <img class='container weathericon shadowCard' id='weatherImg'>
             <div class='container' id='output'></div>
             <div class='container' id='error'></div>
         </div>
