@@ -53,7 +53,8 @@ app.get('/weather', (req, res)=> {
                 location : data.location.name,
                 country : data.location.country,
                 icon : data.current.weather_icons,
-                description : data.current.weather_descriptions
+                description : data.current.weather_descriptions,
+                temperature : data.current.temperature
             });
         }else {
             res.send({error});

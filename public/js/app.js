@@ -1,6 +1,7 @@
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const outputDiv = document.querySelector('#output');
+const tempDiv = document.querySelector('#temperature');
 const errorDiv = document.querySelector('#error');
 var weatherImg = document.querySelector('#weatherImg');
 weatherForm.addEventListener('submit', (e)=> {
@@ -14,6 +15,7 @@ weatherForm.addEventListener('submit', (e)=> {
             errorDiv.textContent = data.error;
         }else {
             outputDiv.textContent = `In ${data.location}, ${data.country} its currently ${data.description}`;
+            tempDiv.textContent = `${data.temperature}\u00B0 C`;
             weatherImg.src = `${data.icon}`;
         }
     });
